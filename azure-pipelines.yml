@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
 
 variables:
   buildConfiguration: Release
@@ -44,6 +44,6 @@ steps:
   displayName: 'Deploy to Azure Web App'
   inputs:
     azureSubscription: 'Towards-AzurePortal'
-    appType: 'webAppLinux'
-    appName: 'web-calculator-app'   # ✅ must exactly match Azure App Service name
+    appType: 'webApp'
+    appName: 'web-calculator-app'
     package: '$(publishDir)/**/*.zip'
