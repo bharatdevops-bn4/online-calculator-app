@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: <agent-specification>
+  vmImage: windows-latest
 
 steps:
 - task: DotNetCoreCLI@2
